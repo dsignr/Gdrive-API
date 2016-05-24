@@ -8,7 +8,7 @@ module Gdrive
     def initialize(client_id, access_token)
       @access_token = access_token
       @client_id = client_id
-      @auth = {:access_token => @access_token}
+      @auth = {:key => @access_token}
     end
 
     def get_file(file_id)
