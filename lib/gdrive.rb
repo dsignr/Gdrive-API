@@ -13,6 +13,7 @@ module Gdrive
 
     def get_file(file_id)
       options = {query: {fileId:"#{file_id}"}.merge!(@auth) }
+      logger.info options
       self.class.get("/drive/v3/files", options)
     end
 
